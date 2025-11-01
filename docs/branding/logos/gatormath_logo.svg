@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <!-- GatorMath Color Palette -->
+    <style>
+      .brand-primary { fill: #2D5016; }
+      .brand-accent { fill: #0D7377; }
+      .brand-gold { fill: #F4D35E; }
+      .brand-slate { fill: #E8E9EB; }
+      .brand-mist { fill: #6B7280; }
+      .brand-charcoal { fill: #1A1D1E; }
+      .eye { fill: #F4D35E; }
+      .eye-pupil { fill: #1A1D1E; }
+      .teeth { fill: #E8E9EB; }
+      .math-symbol { fill: #0D7377; }
+    </style>
+
+    <!-- Gradient for depth -->
+    <linearGradient id="gatorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D5016;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a3010;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="mathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0D7377;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a5558;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background (optional, can be transparent) -->
+  <rect width="400" height="200" fill="transparent"/>
+
+  <!-- Gator Head -->
+  <g id="gator-head">
+    <!-- Upper jaw -->
+    <path d="M 50,100 Q 40,80 50,70 L 120,60 Q 140,58 150,70 L 150,90 Z"
+          fill="url(#gatorGradient)" stroke="#1a3010" stroke-width="2"/>
+
+    <!-- Lower jaw -->
+    <path d="M 50,100 Q 40,110 50,120 L 120,125 Q 140,126 150,115 L 150,90 Z"
+          fill="url(#gatorGradient)" stroke="#1a3010" stroke-width="2"/>
+
+    <!-- Teeth upper -->
+    <path d="M 80,90 L 85,85 L 90,90" class="teeth" stroke="#E8E9EB" stroke-width="1.5" fill="none"/>
+    <path d="M 95,90 L 100,85 L 105,90" class="teeth" stroke="#E8E9EB" stroke-width="1.5" fill="none"/>
+    <path d="M 110,90 L 115,85 L 120,90" class="teeth" stroke="#E8E9EB" stroke-width="1.5" fill="none"/>
+    <path d="M 125,90 L 130,85 L 135,90" class="teeth" stroke="#E8E9EB" stroke-width="1.5" fill="none"/>
+
+    <!-- Teeth lower -->
+    <path d="M 80,100 L 85,105 L 90,100" class="teeth" stroke="#E8E9EB" stroke-width="1.5" fill="none"/>
+    <path d="M 95,100 L 100,105 L 105,100" class="teeth" stroke="#E8E9EB" stroke-width="1.5" fill="none"/>
+    <path d="M 110,100 L 115,105 L 120,100" class="teeth" stroke="#E8E9EB" stroke-width="1.5" fill="none"/>
+    <path d="M 125,100 L 130,105 L 135,100" class="teeth" stroke="#E8E9EB" stroke-width="1.5" fill="none"/>
+
+    <!-- Eye -->
+    <circle cx="130" cy="75" r="8" class="eye"/>
+    <circle cx="130" cy="75" r="4" class="eye-pupil"/>
+    <circle cx="132" cy="73" r="1.5" fill="#F4D35E"/>
+
+    <!-- Nostril -->
+    <ellipse cx="60" cy="75" rx="3" ry="2" class="brand-charcoal"/>
+    <ellipse cx="70" cy="72" rx="2.5" ry="1.8" class="brand-charcoal"/>
+
+    <!-- Scale texture (subtle) -->
+    <circle cx="90" cy="75" r="2" class="brand-mist" opacity="0.3"/>
+    <circle cx="100" cy="77" r="2" class="brand-mist" opacity="0.3"/>
+    <circle cx="110" cy="73" r="2" class="brand-mist" opacity="0.3"/>
+  </g>
+
+  <!-- Mathematical Symbols (floating around) -->
+  <g id="math-symbols">
+    <!-- Pi symbol -->
+    <text x="170" y="75" font-family="serif" font-size="32" font-weight="bold" class="math-symbol">π</text>
+
+    <!-- Integral -->
+    <text x="205" y="105" font-family="serif" font-size="36" font-weight="normal" class="math-symbol">∫</text>
+
+    <!-- Sigma -->
+    <text x="165" y="130" font-family="serif" font-size="30" font-weight="bold" class="math-symbol">Σ</text>
+
+    <!-- Square root -->
+    <text x="210" y="55" font-family="serif" font-size="28" font-weight="normal" class="math-symbol">√</text>
+
+    <!-- Infinity -->
+    <text x="240" y="90" font-family="serif" font-size="26" font-weight="bold" class="math-symbol">∞</text>
+
+    <!-- Delta -->
+    <text x="245" y="120" font-family="serif" font-size="24" font-weight="bold" class="math-symbol">Δ</text>
+  </g>
+
+  <!-- Text: GatorMath -->
+  <g id="wordmark">
+    <text x="50" y="170" font-family="monospace, sans-serif" font-size="36" font-weight="bold" class="brand-primary">Gator</text>
+    <text x="145" y="170" font-family="monospace, sans-serif" font-size="36" font-weight="bold" class="brand-accent">Math</text>
+
+    <!-- Tagline -->
+    <text x="50" y="188" font-family="monospace, sans-serif" font-size="11" class="brand-mist">Mathematical precision with bite</text>
+  </g>
+
+  <!-- Decorative geometric elements -->
+  <g id="decorative-elements" opacity="0.4">
+    <!-- Grid dots (subtle) -->
+    <circle cx="280" cy="60" r="1.5" class="brand-mist"/>
+    <circle cx="290" cy="60" r="1.5" class="brand-mist"/>
+    <circle cx="300" cy="60" r="1.5" class="brand-mist"/>
+
+    <circle cx="280" cy="70" r="1.5" class="brand-mist"/>
+    <circle cx="290" cy="70" r="1.5" class="brand-mist"/>
+    <circle cx="300" cy="70" r="1.5" class="brand-mist"/>
+
+    <!-- Geometric shapes -->
+    <polygon points="320,85 325,95 315,95" class="brand-accent" opacity="0.5"/>
+    <rect x="328" y="88" width="8" height="8" class="brand-gold" opacity="0.5"/>
+    <circle cx="350" cy="92" r="4" class="brand-primary" opacity="0.5"/>
+  </g>
+</svg>
