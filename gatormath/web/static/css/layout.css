@@ -1,16 +1,18 @@
 /**
- * File: css/layout.css
- * Module: Layout Styles
- * Project: GatorMath
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: layout.css
+ *     File Path: gatormath/web/static/css/layout.css
+ *     Module: Layout Styles
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
  *
  * Description:
  *     Structural layout styles including navigation bar, sections, containers,
  *     and grid systems. Handles page structure, positioning, and content flow.
- *
- * Author: GatorMath Development Team
- * Created: 2025-11-02
- * Modified: 2025-11-02
- * Version: 1.0.0
  *
  * Contents:
  *     - Canvas background (Three.js container)
@@ -20,11 +22,16 @@
  *     - Grid layouts (features-grid, calculator-grid, playground-container)
  *     - Footer
  *
+ * Dependencies:
+ *     - base.css (CSS custom properties)
+ *     - Three.js (canvas background)
+ *
  * Layout Strategy:
  *     - Mobile-first responsive design
  *     - Flexbox for navigation and buttons
  *     - CSS Grid for card layouts
  *     - Fixed navigation with backdrop blur
+ *     - Semantic HTML5 sections
  */
 
 /* ===== LAYOUT STYLES ===== */

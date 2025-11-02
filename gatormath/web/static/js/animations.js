@@ -1,3 +1,38 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: animations.js
+ *     File Path: gatormath/web/static/js/animations.js
+ *     Module: GSAP Animations
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Scroll-triggered animations and transitions using GSAP (GreenSock Animation Platform)
+ *     with ScrollTrigger plugin. Provides smooth fade-in effects, parallax scrolling,
+ *     and entrance animations for sections and components.
+ *
+ * Animations:
+ *     - Fade-in elements on scroll (opacity 0→1, y: 50→0)
+ *     - Hero section entrance (title, tagline stagger)
+ *     - Terminal demo slide-in
+ *     - Feature cards stagger animation
+ *     - Section headers fade-in with scroll trigger
+ *
+ * Dependencies:
+ *     - GSAP library (gsap.min.js)
+ *     - ScrollTrigger plugin (ScrollTrigger.min.js)
+ *
+ * Configuration:
+ *     - Duration: 0.8-1s
+ *     - Easing: power2.out, power3.out
+ *     - Trigger point: top 80%
+ *     - Toggle actions: play none none reverse
+ */
+
 // ===== GSAP ANIMATIONS =====
 // Scroll-triggered animations and transitions
 

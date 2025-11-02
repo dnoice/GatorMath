@@ -1,3 +1,35 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: utils.js
+ *     File Path: gatormath/web/static/js/utils.js
+ *     Module: Utility Functions
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Shared utility functions used across different canvas modules and
+ *     interactive components. Provides canvas setup with retina scaling,
+ *     navigation menu toggling, and welcome tooltip management.
+ *
+ * Exports (Global):
+ *     - setupCanvas(canvas): Canvas setup with retina display support
+ *     - window.toggleMenu(): Hamburger menu toggle
+ *     - window.closeWelcome(): Welcome tooltip dismiss with localStorage
+ *
+ * Dependencies:
+ *     - HTML5 Canvas API
+ *     - localStorage API
+ *
+ * Functions:
+ *     - setupCanvas: Configures canvas for high-DPI displays
+ *     - toggleMenu: Toggles mobile navigation menu
+ *     - closeWelcome: Dismisses welcome tooltip with animation
+ */
+
 // ===== UTILITY FUNCTIONS =====
 // Shared utility functions used across different modules
 

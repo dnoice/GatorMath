@@ -1,3 +1,40 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: playground.css
+ *     File Path: gatormath/web/static/css/playground.css
+ *     Module: Interactive Playground Styles
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Styles for interactive mathematical playgrounds including vector operations,
+ *     Bezier curves, matrix transformations, and triangle calculations. Provides
+ *     canvas containers, controls, and visual feedback for live demonstrations.
+ *
+ * Contents:
+ *     - Canvas containers (bordered, dark backgrounds)
+ *     - Interactive canvases (400px height, crosshair cursor)
+ *     - Control groups (labels, range inputs, value displays)
+ *     - Operation buttons (grid layout, active states)
+ *     - Result vectors (dashed stroke styling)
+ *     - Output displays (monospace output lines)
+ *     - Reset buttons (transparent with hover effect)
+ *
+ * Dependencies:
+ *     - base.css (CSS custom properties)
+ *     - JavaScript canvas modules (vector-canvas.js, bezier-canvas.js, etc.)
+ *
+ * Interaction Features:
+ *     - Custom range slider styling (webkit/moz)
+ *     - Hover effects on canvas and buttons
+ *     - Active state for selected operations
+ *     - Monospace output for mathematical precision
+ */
+
 /* ===== PLAYGROUND STYLES ===== */
 /* Interactive Canvases, Controls, Vector/Bezier/Matrix/Triangle Playgrounds */
 

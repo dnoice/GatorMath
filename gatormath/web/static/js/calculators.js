@@ -1,3 +1,38 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: calculators.js
+ *     File Path: gatormath/web/static/js/calculators.js
+ *     Module: Live Calculators
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Interactive mathematical calculators for distance, circle properties,
+ *     angle conversion, and vector projection. Provides real-time calculations
+ *     with visual feedback in calculator cards.
+ *
+ * Exports (Global):
+ *     - window.calculateDistance(): 2D point distance calculator
+ *     - window.calculateCircle(): Circle area and circumference
+ *     - window.convertAngle(): Degrees/radians/gradians conversion
+ *     - window.calculateProjection(): Vector projection calculator
+ *
+ * Dependencies:
+ *     - HTML input elements (calculator cards)
+ *     - Math API (Math.sqrt, Math.PI)
+ *
+ * Formulas:
+ *     - Distance: √((x2-x1)² + (y2-y1)²)
+ *     - Circle Area: πr²
+ *     - Circle Circumference: 2πr
+ *     - Angle Conversion: rad = deg × π/180, grad = deg × 10/9
+ *     - Vector Projection: (v1·v2)/|v2|
+ */
+
 // ===== CALCULATOR FUNCTIONS =====
 // Live calculators for distance, circle, angle conversion, etc.
 

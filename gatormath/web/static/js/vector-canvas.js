@@ -1,3 +1,45 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: vector-canvas.js
+ *     File Path: gatormath/web/static/js/vector-canvas.js
+ *     Module: Vector Operations Canvas
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Interactive vector operations playground with draggable vectors.
+ *     Visualizes addition, subtraction, dot product, cross product, and
+ *     magnitude calculations in real-time on HTML5 canvas.
+ *
+ * Functions:
+ *     - initVectorCanvas(): Initialize vector playground
+ *     - drawVectorCanvas(): Render vectors and grid
+ *     - drawVector(): Draw arrow from origin to point
+ *     - getVectorMagnitude(): Calculate vector length
+ *
+ * Features:
+ *     - Draggable vector endpoints
+ *     - Grid background (50px spacing)
+ *     - Operation buttons (add, subtract, dot, cross, magnitude)
+ *     - Real-time result visualization
+ *     - Mouse/touch interaction support
+ *
+ * Dependencies:
+ *     - utils.js (setupCanvas)
+ *     - HTML5 Canvas API
+ *
+ * Operations:
+ *     - Addition: v1 + v2
+ *     - Subtraction: v1 - v2
+ *     - Dot Product: v1 · v2
+ *     - Cross Product: v1 × v2 (2D cross product)
+ *     - Magnitude: |v|
+ */
+
 // ===== VECTOR CANVAS =====
 // Vector operations interactive playground
 

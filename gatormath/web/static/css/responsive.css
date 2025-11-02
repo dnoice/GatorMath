@@ -1,3 +1,43 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: responsive.css
+ *     File Path: gatormath/web/static/css/responsive.css
+ *     Module: Responsive Design
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Responsive media queries for adapting layout and typography across
+ *     different screen sizes. Implements mobile-first responsive design with
+ *     breakpoints for large desktop, desktop, laptop, tablet, mobile, and
+ *     small mobile devices.
+ *
+ * Contents:
+ *     - Large Desktop (≥1920px): Enhanced sizing, larger canvases
+ *     - Desktop (≤1440px): Standard desktop layout
+ *     - Laptop (≤1024px): Reduced grid columns, smaller typography
+ *     - Tablet (≤768px): Single column grids, adjusted navigation
+ *     - Mobile (≤480px): Hamburger menu, stacked layout, touch-friendly
+ *     - Small Mobile (≤360px): Minimum viable sizing
+ *
+ * Dependencies:
+ *     - base.css (CSS custom properties)
+ *     - layout.css (navigation, sections, grids)
+ *     - components.css (cards, buttons)
+ *     - playground.css (canvases, controls)
+ *
+ * Breakpoint Strategy:
+ *     - Mobile-first approach (min-width for upgrades)
+ *     - Progressive enhancement for larger screens
+ *     - Touch-friendly targets on mobile (44px minimum)
+ *     - Hamburger menu activation at 480px
+ *     - Grid column reduction for smaller viewports
+ */
+
 /* ===== RESPONSIVE STYLES ===== */
 /* Media Queries for Different Screen Sizes */
 

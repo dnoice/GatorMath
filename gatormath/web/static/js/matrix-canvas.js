@@ -1,3 +1,44 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: matrix-canvas.js
+ *     File Path: gatormath/web/static/js/matrix-canvas.js
+ *     Module: Matrix Transformations Visualizer
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Visual demonstration of 2D matrix transformations including rotation,
+ *     scaling, and shearing. Shows original shape (dashed) and transformed
+ *     shape (solid) side-by-side for comparison.
+ *
+ * Functions:
+ *     - initMatrixCanvas(): Initialize matrix playground
+ *     - drawMatrixCanvas(): Render original and transformed shapes
+ *     - drawShape(): Draw geometric shape (square/triangle)
+ *
+ * Features:
+ *     - Rotation slider (0-360°)
+ *     - Scale slider (0.1-3.0x)
+ *     - Shear slider (-1.0 to 1.0)
+ *     - Original shape overlay (dashed outline)
+ *     - Transformed shape (solid with glow)
+ *     - Real-time transformation updates
+ *
+ * Dependencies:
+ *     - utils.js (setupCanvas)
+ *     - HTML5 Canvas API
+ *     - Range input controls
+ *
+ * Transformations:
+ *     - Rotation Matrix: [[cos θ, -sin θ], [sin θ, cos θ]]
+ *     - Scale Matrix: [[s, 0], [0, s]]
+ *     - Shear Matrix: [[1, k], [0, 1]]
+ */
+
 // ===== MATRIX CANVAS =====
 // Matrix transformations visualizer
 

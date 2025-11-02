@@ -1,3 +1,42 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: bezier-canvas.js
+ *     File Path: gatormath/web/static/js/bezier-canvas.js
+ *     Module: Bezier Curve Editor
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Interactive cubic Bezier curve editor with animation along the curve.
+ *     Allows dragging of 4 control points to manipulate the curve shape in
+ *     real-time. Includes animated point traversal along the curve path.
+ *
+ * Functions:
+ *     - initBezierCanvas(): Initialize Bezier editor
+ *     - drawBezierCanvas(): Render curve and control points
+ *     - cubicBezier(): Calculate point on cubic Bezier curve
+ *     - animateBezier(): Animate point along curve
+ *
+ * Features:
+ *     - 4 draggable control points
+ *     - Control lines (dashed, semi-transparent)
+ *     - Smooth cubic Bezier curve rendering
+ *     - Animated point traversal (t: 0→1)
+ *     - Point labels (P0, P1, P2, P3)
+ *
+ * Dependencies:
+ *     - utils.js (setupCanvas)
+ *     - HTML5 Canvas API
+ *
+ * Mathematical Formula:
+ *     B(t) = (1-t)³P0 + 3(1-t)²tP1 + 3(1-t)t²P2 + t³P3
+ *     where t ∈ [0, 1]
+ */
+
 // ===== BEZIER CANVAS =====
 // Bezier curve editor with animation
 

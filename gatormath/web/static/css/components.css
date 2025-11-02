@@ -1,3 +1,41 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: components.css
+ *     File Path: gatormath/web/static/css/components.css
+ *     Module: Component Styles
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Reusable UI component styles including buttons, cards, terminals,
+ *     code blocks, calculators, and interactive elements. Provides consistent
+ *     styling primitives for all interactive components across the application.
+ *
+ * Contents:
+ *     - Buttons (primary, secondary, CTA)
+ *     - Terminal demo (header, dots, prompt, output)
+ *     - Feature cards (hover effects, icons)
+ *     - Code blocks (syntax highlighting, labels)
+ *     - Geometry cards (SVG displays)
+ *     - Calculator cards (input groups, result displays)
+ *     - Code editor (editor panel, output panel, run button)
+ *     - Welcome tooltip (fixed position notification)
+ *
+ * Dependencies:
+ *     - base.css (CSS custom properties, color palette)
+ *     - Google Fonts: Inter, Fira Code
+ *
+ * Interaction Patterns:
+ *     - Hover effects with transform and box-shadow
+ *     - Focus states for inputs with glow
+ *     - Transition animations (0.3s ease)
+ *     - Monospace font for code and calculator displays
+ */
+
 /* ===== COMPONENT STYLES ===== */
 /* Buttons, Cards, Terminal, Code Blocks, Calculators */
 

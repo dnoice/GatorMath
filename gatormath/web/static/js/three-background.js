@@ -1,3 +1,45 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: three-background.js
+ *     File Path: gatormath/web/static/js/three-background.js
+ *     Module: Three.js Background Animation
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Animated 3D background using Three.js with floating particles and
+ *     rotating grid. Creates an immersive mathematical environment with
+ *     continuous animation and responsive resizing.
+ *
+ * Functions:
+ *     - initThreeJS(): Initialize Three.js scene
+ *     - animate(): Animation loop
+ *     - onWindowResize(): Handle window resize events
+ *
+ * Components:
+ *     - Scene: Three.js Scene container
+ *     - Camera: PerspectiveCamera (75° FOV)
+ *     - Renderer: WebGLRenderer with alpha transparency
+ *     - GridHelper: 3D grid (100x100, 20 divisions)
+ *     - Particles: Point cloud with random positions
+ *     - Animation: Continuous rotation and movement
+ *
+ * Dependencies:
+ *     - Three.js library (three.min.js)
+ *     - WebGL support
+ *
+ * Configuration:
+ *     - Grid Size: 100 units
+ *     - Grid Divisions: 20
+ *     - Particle Count: ~1000
+ *     - Rotation Speed: Slow, continuous
+ *     - Camera Position: z=50
+ */
+
 // ===== THREE.JS BACKGROUND =====
 // Animated 3D grid background with particles
 

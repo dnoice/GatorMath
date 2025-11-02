@@ -1,3 +1,45 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: triangle-canvas.js
+ *     File Path: gatormath/web/static/js/triangle-canvas.js
+ *     Module: Triangle Calculator Canvas
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Interactive triangle calculator with draggable vertices. Computes and
+ *     displays area (Heron's formula), perimeter, side lengths, and angles
+ *     in real-time as vertices are moved.
+ *
+ * Functions:
+ *     - initTriangleCanvas(): Initialize triangle playground
+ *     - drawTriangleCanvas(): Render triangle and measurements
+ *     - calculateTriangleProps(): Compute area, perimeter, angles
+ *     - updateOutput(): Display calculated properties
+ *
+ * Features:
+ *     - 3 draggable vertices
+ *     - Filled triangle with glow effect
+ *     - Side length labels
+ *     - Angle measurements
+ *     - Area (Heron's formula)
+ *     - Perimeter calculation
+ *
+ * Dependencies:
+ *     - utils.js (setupCanvas)
+ *     - HTML5 Canvas API
+ *
+ * Mathematical Formulas:
+ *     - Side Length: √((x2-x1)² + (y2-y1)²)
+ *     - Heron's Formula: A = √(s(s-a)(s-b)(s-c)) where s = (a+b+c)/2
+ *     - Law of Cosines: cos(C) = (a²+b²-c²)/(2ab)
+ *     - Perimeter: P = a + b + c
+ */
+
 // ===== TRIANGLE CANVAS =====
 // Triangle calculator with area, perimeter, and angles
 

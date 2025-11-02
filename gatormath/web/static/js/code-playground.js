@@ -1,3 +1,43 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: code-playground.js
+ *     File Path: gatormath/web/static/js/code-playground.js
+ *     Module: Code Playground
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Interactive JavaScript code editor with live execution and output display.
+ *     Captures console.log and console.error output and displays in a styled
+ *     output panel. Uses eval() for code execution (client-side only).
+ *
+ * Exports (Global):
+ *     - window.runCode(): Execute code from editor textarea
+ *
+ * Features:
+ *     - Code editor (textarea with monospace font)
+ *     - Run button to execute code
+ *     - Output panel with log/error styling
+ *     - Console.log capture and redirection
+ *     - Console.error capture with styling
+ *     - JSON stringify for object logging
+ *     - Try-catch error handling
+ *
+ * Dependencies:
+ *     - Native JavaScript eval()
+ *     - Console API override
+ *
+ * Security Note:
+ *     - Uses eval() for code execution
+ *     - Client-side only (no server execution)
+ *     - Runs in user's browser context
+ *     - No persistent storage or external API calls
+ */
+
 // ===== CODE PLAYGROUND =====
 // Interactive code editor with live execution
 
