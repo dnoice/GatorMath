@@ -1,32 +1,22 @@
 """
-Module Name: shapes2d
+Metadata:
+    Project: GatorMath
+    File Name: shapes2d.py
+    File Path: gatormath/geometry/shapes2d.py
+    Module: 2D Geometric Shapes
+    Created: 2025-11-02
+    Modified: 2025-11-02
+    Version: 0.1.0
+    Author: Dennis 'dnoice' Smaltz
+    AI Acknowledgement: Claude Code
 
 Description:
     2D geometric shapes with comprehensive property calculations, type
     classification, and degenerate case handling. Provides Circle, Rectangle,
     Square, and Triangle classes with area, perimeter, and geometric properties.
 
-Module Path: gatormath/geometry/shapes2d.py
-Package: gatormath.geometry
-
-Author: Dennis 'dnoice' Smaltz
-AI Acknowledgement: Claude Code
-Created: 2025-11-02
-Modified: 2025-11-02
-Version: 0.1.0
-
-Dependencies:
-    - math: Standard library math functions
-    - typing: Type hints
-    - gatormath.precision: Floating-point comparison utilities
-
-Exports:
-    - Circle: Circle shape with radius
-    - Rectangle: Rectangle shape with width and height
-    - Square: Square shape with side length
-    - Triangle: Triangle shape with three sides
-
-Examples:
+Usage:
+    >>> from gatormath.geometry.shapes2d import Circle, Triangle
     >>> circle = Circle(radius=5.0)
     >>> circle.area()
     78.53981633974483
@@ -35,13 +25,25 @@ Examples:
     >>> triangle.is_right_triangle()
     True
 
-Notes:
-    All shapes validate inputs and handle degenerate cases appropriately
-    Precision-aware comparisons used throughout
+Contents:
+    Classes:
+        - Circle: Circle shape with radius
+        - Rectangle: Rectangle shape with width and height
+        - Square: Square shape with side length
+        - Triangle: Triangle shape with three sides
+
+Dependencies:
+    - math: Standard library math functions
+    - typing: Type hints
+    - gatormath.precision.comparison: Floating-point comparison utilities
 
 References:
     [1] Euclidean geometry principles
     [2] Triangle inequality theorem
+
+Notes:
+    All shapes validate inputs and handle degenerate cases appropriately
+    Precision-aware comparisons used throughout
 """
 
 import math

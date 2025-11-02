@@ -51,79 +51,71 @@ This document defines the organization, naming, optimization, and usage of all G
 
 ```
 gatormath/web/
-├── static/
-│   ├── css/                        # Stylesheets (5 files)
-│   │   ├── base.css               # CSS variables, resets, animations
-│   │   ├── layout.css             # Navigation, sections, grids
-│   │   ├── components.css         # Buttons, cards, calculators
-│   │   ├── playground.css         # Interactive canvas styles
-│   │   └── responsive.css         # Media queries
-│   │
-│   ├── js/                        # JavaScript modules (10 files)
-│   │   ├── utils.js               # Shared utilities
-│   │   ├── three-background.js    # 3D particle system
-│   │   ├── animations.js          # GSAP scroll animations
-│   │   ├── vector-canvas.js       # Vector operations playground
-│   │   ├── bezier-canvas.js       # Bezier curve editor
-│   │   ├── matrix-canvas.js       # Matrix transformations
-│   │   ├── triangle-canvas.js     # Triangle calculator
-│   │   ├── calculators.js         # Live calculators
-│   │   ├── code-playground.js     # Code editor
-│   │   └── init.js                # Initialization
-│   │
-│   ├── fonts/                     # Web fonts (if self-hosted)
-│   │   ├── jetbrains-mono/
-│   │   └── inter/
-│   │
-│   └── images/                    # Web images
-│       ├── og-image.png           # Open Graph image (1200×630)
-│       ├── favicon.svg            # Scalable favicon
-│       └── icons/                 # UI icons
-│
-└── templates/
-    └── index.html                 # Main HTML template
+├── static/                             # Frontend assets
+│   ├── css/                            # Modular stylesheets (5 files)
+│   │   ├── base.css                    # CSS variables, resets, animations
+│   │   ├── layout.css                  # Navigation, sections, grids
+│   │   ├── components.css              # Buttons, cards, calculators
+│   │   ├── playground.css              # Interactive canvas styles
+│   │   └── responsive.css              # Media queries
+│   ├── js/                             # Modular JavaScript (10 files)
+│   │   ├── utils.js                    # Shared utilities
+│   │   ├── three-background.js         # 3D particle system
+│   │   ├── animations.js               # GSAP scroll animations
+│   │   ├── vector-canvas.js            # Vector operations playground
+│   │   ├── bezier-canvas.js            # Bezier curve editor
+│   │   ├── matrix-canvas.js            # Matrix transformations
+│   │   ├── triangle-canvas.js          # Triangle calculator
+│   │   ├── calculators.js              # Live calculators
+│   │   ├── code-playground.js          # Code editor
+│   │   └── init.js                     # Initialization coordinator
+│   ├── fonts/                          # Web fonts (if self-hosted)
+│   │   ├── jetbrains-mono/             # JetBrains Mono font files
+│   │   └── inter/                      # Inter font files
+│   └── images/                         # Web images
+│       ├── og-image.png                # Open Graph image (1200×630)
+│       ├── favicon.svg                 # Scalable favicon
+│       └── icons/                      # UI icons
+└── templates/                          # Jinja2 templates
+    └── index.html                      # Main web interface
 ```
 
 ### Brand Assets
 
 ```
 docs/branding/
-├── logos/
-│   ├── gatormath-primary.svg      # Full logo with mascot
-│   ├── gatormath-icon.svg         # Icon/mascot only
-│   ├── gatormath-wordmark.svg     # Text only
-│   └── variations/
-│       ├── gatormath-light.svg    # Light background variant
-│       ├── gatormath-dark.svg     # Dark background variant
-│       └── gatormath-monochrome.svg
-│
-├── icons/
-│   ├── favicon.ico                # Multi-size ICO
-│   ├── favicon.svg                # Modern browsers
-│   ├── apple-touch-icon.png       # iOS (180×180)
-│   ├── android-chrome-192x192.png
-│   ├── android-chrome-512x512.png
-│   └── ui-icons/
-│       ├── calculator.svg
-│       ├── geometry.svg
-│       └── precision.svg
-│
-├── diagrams/
-│   ├── architecture.svg           # System architecture
-│   ├── workflow.svg              # Development workflow
-│   ├── data-flow.svg             # Data flow diagrams
-│   └── concepts/
-│       ├── precision.svg         # Floating-point precision
-│       └── geometry.svg          # Geometric concepts
-│
-├── colors/
-│   ├── palette.svg               # Visual palette
-│   ├── swatches.json             # Color definitions
-│   └── gradients.svg             # Brand gradients
-│
-└── patterns/
-    ├── background-pattern.svg    # Repeatable patterns
-    └── texture.png               # Subtle textures
+├── logos/                                  # Logo files
+│   ├── gatormath-primary.svg              # Full logo with mascot
+│   ├── gatormath-icon.svg                 # Icon/mascot only
+│   ├── gatormath-wordmark.svg             # Text only
+│   └── variations/                        # Logo variations
+│       ├── gatormath-light.svg            # Light background variant
+│       ├── gatormath-dark.svg             # Dark background variant
+│       └── gatormath-monochrome.svg       # Monochrome version
+├── icons/                                 # Icon assets
+│   ├── favicon.ico                        # Multi-size ICO
+│   ├── favicon.svg                        # Modern browsers
+│   ├── apple-touch-icon.png               # iOS (180×180)
+│   ├── android-chrome-192x192.png         # Android icon 192px
+│   ├── android-chrome-512x512.png         # Android icon 512px
+│   └── ui-icons/                          # UI icons
+│       ├── calculator.svg                 # Calculator icon
+│       ├── geometry.svg                   # Geometry icon
+│       └── precision.svg                  # Precision icon
+├── diagrams/                              # Technical diagrams
+│   ├── architecture.svg                   # System architecture
+│   ├── workflow.svg                       # Development workflow
+│   ├── data-flow.svg                      # Data flow diagrams
+│   └── concepts/                          # Concept illustrations
+│       ├── precision.svg                  # Floating-point precision
+│       └── geometry.svg                   # Geometric concepts
+├── colors/                                # Color assets
+│   ├── palette.svg                        # Visual palette
+│   ├── swatches.json                      # Color definitions
+│   └── gradients.svg                      # Brand gradients
+└── patterns/                              # Pattern assets
+    ├── background-pattern.svg             # Repeatable patterns
+    └── texture.png                        # Subtle textures
 ```
 
 ---
