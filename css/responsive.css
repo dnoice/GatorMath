@@ -1,0 +1,269 @@
+/* ===== RESPONSIVE STYLES ===== */
+/* Media Queries for Different Screen Sizes */
+
+/* Large Desktop */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .hero h1 {
+        font-size: 5.5rem;
+    }
+
+    .interactive-canvas {
+        height: 500px;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1440px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero .tagline {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        padding: 1rem 2rem;
+    }
+
+    section {
+        padding: 3rem 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .playground-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .code-showcase {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .tagline {
+        font-size: 1.1rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .code-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .playground-container {
+        grid-template-columns: 1fr;
+    }
+
+    .playground-editor {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .geometry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    section {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .interactive-canvas {
+        height: 300px;
+    }
+
+    .terminal-demo {
+        padding: 1.5rem;
+    }
+
+    .terminal-content {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .tagline {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 0.75rem 1rem;
+    }
+
+    .logo-container {
+        gap: 0.5rem;
+    }
+
+    .logo-svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(46, 46, 46, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-bottom: 1px solid rgba(0, 166, 118, 0.2);
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .hero {
+        padding-top: 6rem;
+    }
+
+    .feature-card,
+    .geometry-card,
+    .calculator-card,
+    .canvas-container,
+    .code-block {
+        padding: 1.5rem;
+    }
+
+    .interactive-canvas {
+        height: 250px;
+    }
+
+    .geometry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.875rem 2rem;
+    }
+
+    .terminal-demo {
+        padding: 1rem;
+    }
+
+    .terminal-content {
+        font-size: 0.75rem;
+    }
+
+    .code-editor {
+        font-size: 0.8rem;
+    }
+
+    .output-panel {
+        font-size: 0.8rem;
+    }
+
+    .operation-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-tooltip {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        max-width: none;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .interactive-canvas {
+        height: 200px;
+    }
+}

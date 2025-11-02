@@ -1,0 +1,62 @@
+/* ===== BASE STYLES ===== */
+/* CSS Variables, Resets, Typography */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gator-green: #00A676;
+    --swamp-gold: #F2C94C;
+    --graphite: #2E2E2E;
+    --mist-white: #F9FAF8;
+    --glow-green: rgba(0, 166, 118, 0.5);
+    --glow-gold: rgba(242, 201, 76, 0.5);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--graphite);
+    color: var(--mist-white);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+code, .mono {
+    font-family: 'Fira Code', monospace;
+}
+
+/* Syntax highlighting colors */
+.keyword { color: #ff79c6; }
+.function { color: var(--swamp-gold); }
+.string { color: #50fa7b; }
+.number { color: var(--gator-green); }
+.comment { color: #888; }
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
