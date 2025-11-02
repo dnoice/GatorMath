@@ -8,7 +8,8 @@ Description:
 Module Path: gatormath/cli/__init__.py
 Package: gatormath.cli
 
-Author: GatorMath Development Team
+Author: Dennis 'dnoice' Smaltz
+AI Acknowledgement: Claude Code
 Created: 2025-11-02
 Modified: 2025-11-02
 Version: 0.1.0
