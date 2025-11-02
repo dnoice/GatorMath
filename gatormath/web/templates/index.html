@@ -1,3 +1,42 @@
+<!--
+Metadata:
+    Project: GatorMath
+    File Name: index.html
+    File Path: gatormath/web/templates/index.html
+    Module: Main Web Interface Template
+    Created: 2025-11-01
+    Modified: 2025-11-02
+    Version: 1.0.0
+    Author: Dennis 'dnoice' Smaltz
+    AI Acknowledgement: Claude Code
+
+Description:
+    Interactive web interface showcasing mathematical visualizations and calculations.
+    Features vector operations, Bezier curves, matrix transformations, live calculators,
+    and an interactive code playground with 3D animated background.
+
+Architecture:
+    - Modular CSS: base, layout, components, playground, responsive
+    - Modular JavaScript: utils, animations, canvas modules, calculators
+    - External Libraries: Three.js (3D graphics), GSAP (animations), Math.js (calculations)
+
+Features:
+    - Vector Operations Playground (drag-and-drop interactive)
+    - Bezier Curve Editor with animation
+    - Matrix Transformation Visualizer
+    - Triangle Calculator (dynamic calculations)
+    - Live Math Calculators (distance, circle, angles, etc.)
+    - Interactive Code Playground
+    - 3D Animated Background (Three.js particle system)
+
+Branding:
+    - Colors: Gator Green (#00A676), Swamp Gold (#F2C94C), Graphite (#2E2E2E)
+    - Fonts: Inter (sans-serif), Fira Code (monospace)
+    - Theme: Mathematical precision meets Florida swamp aesthetics
+
+Browser Support: Modern browsers with ES6+ support
+Responsive: Mobile-first, scales to 4K displays
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +49,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Custom stylsheets -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/playground.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
     
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -591,7 +634,17 @@ console.log('Circle area:', area.toFixed(2));</textarea>
     </div>
     
     <!-- Custom Scripts -->
-    <script src="/js/scripts.js"></script>
-    
+    <!-- Load in specific order: utilities first, then modules, then initialization -->
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/three-background.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vector-canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bezier-canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/matrix-canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/triangle-canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/calculators.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/code-playground.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+
 </body>
 </html>

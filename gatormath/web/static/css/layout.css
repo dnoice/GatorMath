@@ -1,0 +1,284 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: layout.css
+ *     File Path: gatormath/web/static/css/layout.css
+ *     Module: Layout Styles
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Structural layout styles including navigation bar, sections, containers,
+ *     and grid systems. Handles page structure, positioning, and content flow.
+ *
+ * Contents:
+ *     - Canvas background (Three.js container)
+ *     - Navigation bar (fixed header with hamburger menu)
+ *     - Sections (hero, features, examples, playground, etc.)
+ *     - Container (max-width content wrapper)
+ *     - Grid layouts (features-grid, calculator-grid, playground-container)
+ *     - Footer
+ *
+ * Dependencies:
+ *     - base.css (CSS custom properties)
+ *     - Three.js (canvas background)
+ *
+ * Layout Strategy:
+ *     - Mobile-first responsive design
+ *     - Flexbox for navigation and buttons
+ *     - CSS Grid for card layouts
+ *     - Fixed navigation with backdrop blur
+ *     - Semantic HTML5 sections
+ */
+
+/* ===== LAYOUT STYLES ===== */
+/* Navigation, Sections, Container, Grid Layouts */
+
+/* Canvas Background */
+#canvas-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 3rem;
+    background: rgba(46, 46, 46, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 166, 118, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-svg {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gator-green), var(--swamp-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--gator-green);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--mist-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gator-green);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--gator-green);
+}
+
+/* Sections */
+section {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Section Backgrounds */
+.features {
+    background: rgba(46, 46, 46, 0.5);
+}
+
+.code-examples {
+    background: linear-gradient(180deg, rgba(46, 46, 46, 0.5), rgba(20, 20, 20, 0.8));
+}
+
+.geometry-showcase {
+    background: rgba(20, 20, 20, 0.5);
+}
+
+.playground {
+    background: rgba(46, 46, 46, 0.8);
+}
+
+.code-playground {
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.8), rgba(46, 46, 46, 0.5));
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--gator-green);
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: rgba(249, 250, 248, 0.7);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--gator-green), var(--swamp-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.hero .tagline {
+    font-size: 1.5rem;
+    color: rgba(249, 250, 248, 0.8);
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+/* Grids */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.geometry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.code-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.playground-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.playground-editor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    z-index: 1;
+    background: rgba(20, 20, 20, 0.95);
+    padding: 3rem;
+    text-align: center;
+    border-top: 1px solid var(--gator-green);
+}
+
+footer p {
+    color: rgba(249, 250, 248, 0.6);
+}
+
+footer a {
+    color: var(--gator-green);
+    text-decoration: none;
+}

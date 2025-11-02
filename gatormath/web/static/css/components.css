@@ -1,0 +1,460 @@
+/**
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: components.css
+ *     File Path: gatormath/web/static/css/components.css
+ *     Module: Component Styles
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
+ *
+ * Description:
+ *     Reusable UI component styles including buttons, cards, terminals,
+ *     code blocks, calculators, and interactive elements. Provides consistent
+ *     styling primitives for all interactive components across the application.
+ *
+ * Contents:
+ *     - Buttons (primary, secondary, CTA)
+ *     - Terminal demo (header, dots, prompt, output)
+ *     - Feature cards (hover effects, icons)
+ *     - Code blocks (syntax highlighting, labels)
+ *     - Geometry cards (SVG displays)
+ *     - Calculator cards (input groups, result displays)
+ *     - Code editor (editor panel, output panel, run button)
+ *     - Welcome tooltip (fixed position notification)
+ *
+ * Dependencies:
+ *     - base.css (CSS custom properties, color palette)
+ *     - Google Fonts: Inter, Fira Code
+ *
+ * Interaction Patterns:
+ *     - Hover effects with transform and box-shadow
+ *     - Focus states for inputs with glow
+ *     - Transition animations (0.3s ease)
+ *     - Monospace font for code and calculator displays
+ */
+
+/* ===== COMPONENT STYLES ===== */
+/* Buttons, Cards, Terminal, Code Blocks, Calculators */
+
+/* Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--gator-green);
+    color: var(--graphite);
+    box-shadow: 0 0 20px var(--glow-green);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px var(--glow-green);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--gator-green);
+    border: 2px solid var(--gator-green);
+}
+
+.btn-secondary:hover {
+    background: var(--gator-green);
+    color: var(--graphite);
+}
+
+/* Terminal Demo */
+.terminal-demo {
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid var(--gator-green);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem auto;
+    max-width: 800px;
+    box-shadow: 0 0 30px var(--glow-green);
+    text-align: left;
+}
+
+.terminal-header {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+
+.terminal-content {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+}
+
+.terminal-line {
+    margin-bottom: 0.75rem;
+}
+
+.prompt {
+    color: var(--gator-green);
+}
+
+.command {
+    color: var(--swamp-gold);
+}
+
+.output {
+    color: var(--mist-white);
+    opacity: 0.9;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: rgba(20, 20, 20, 0.7);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 166, 118, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gator-green), var(--swamp-gold));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gator-green);
+    box-shadow: 0 10px 30px var(--glow-green);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--swamp-gold);
+}
+
+.feature-card p {
+    color: rgba(249, 250, 248, 0.8);
+    line-height: 1.8;
+}
+
+/* Code Blocks */
+.code-block {
+    background: rgba(20, 20, 20, 0.95);
+    border: 2px solid var(--gator-green);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.code-block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, var(--glow-green), transparent);
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.code-label {
+    color: var(--swamp-gold);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.code-block pre {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--mist-white);
+    overflow-x: auto;
+}
+
+/* Geometry Cards */
+.geometry-card {
+    background: rgba(46, 46, 46, 0.7);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(242, 201, 76, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.geometry-card:hover {
+    border-color: var(--swamp-gold);
+    box-shadow: 0 10px 30px var(--glow-gold);
+    transform: translateY(-5px);
+}
+
+.geometry-svg {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+}
+
+.geometry-card h4 {
+    color: var(--swamp-gold);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.geometry-card p {
+    color: rgba(249, 250, 248, 0.7);
+    font-size: 0.95rem;
+}
+
+/* Calculator Cards */
+.calculator-card {
+    background: rgba(20, 20, 20, 0.9);
+    border: 2px solid var(--gator-green);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.calc-title {
+    color: var(--swamp-gold);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.input-group label {
+    color: var(--mist-white);
+    min-width: 30px;
+    font-weight: 600;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 166, 118, 0.3);
+    border-radius: 6px;
+    color: var(--gator-green);
+    font-family: 'Fira Code', monospace;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: var(--gator-green);
+    box-shadow: 0 0 10px var(--glow-green);
+}
+
+.calc-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--gator-green);
+    color: var(--graphite);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.calc-btn:hover {
+    box-shadow: 0 0 20px var(--glow-green);
+    transform: translateY(-2px);
+}
+
+.result-display {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--gator-green);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    min-height: 60px;
+}
+
+.result-label {
+    color: var(--swamp-gold);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-value {
+    color: var(--gator-green);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+}
+
+/* Code Editor */
+.editor-panel {
+    background: rgba(20, 20, 20, 0.95);
+    border: 2px solid var(--gator-green);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.editor-title {
+    color: var(--swamp-gold);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.run-btn {
+    padding: 0.5rem 1.5rem;
+    background: var(--gator-green);
+    color: var(--graphite);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.run-btn:hover {
+    box-shadow: 0 0 20px var(--glow-green);
+    transform: translateY(-2px);
+}
+
+.code-editor {
+    width: 100%;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 166, 118, 0.3);
+    border-radius: 6px;
+    padding: 1rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: var(--mist-white);
+    resize: vertical;
+    outline: none;
+}
+
+.code-editor:focus {
+    border-color: var(--gator-green);
+}
+
+.output-panel {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 166, 118, 0.3);
+    border-radius: 6px;
+    padding: 1rem;
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+.output-panel .log {
+    color: var(--gator-green);
+    margin-bottom: 0.5rem;
+}
+
+.output-panel .error {
+    color: #ff5555;
+    margin-bottom: 0.5rem;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Welcome Tooltip */
+.welcome-tooltip {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: rgba(0, 166, 118, 0.95);
+    color: var(--graphite);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 166, 118, 0.4);
+    max-width: 350px;
+    z-index: 10000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.welcome-tooltip h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.welcome-tooltip p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.welcome-tooltip button {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--graphite);
+    color: var(--gator-green);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.welcome-tooltip button:hover {
+    background: rgba(46, 46, 46, 0.8);
+}
