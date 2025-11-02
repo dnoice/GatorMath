@@ -2,7 +2,7 @@
 
 > All summaries of all branches and commits live in this dedicated file.
 > All detailed documentation realted to branches and commits lives in this dedicated directory
-> All newly created branch directory names must use the actual branch name that is assigned to them for example: 
+> All newly created branch directory names must use the actual branch name that is assigned to them for example: docs/claude/build-robust-artifacts-011CUgtqUiFX2VjKUArtgJmp
 > Each branch that is created, whether it's merged to main or not must have its own dedicated directory created with the following markdown documentation placed within each cooresponding one:
 1. BRANCH_DETAILS.md
 2. AUDITS.md
