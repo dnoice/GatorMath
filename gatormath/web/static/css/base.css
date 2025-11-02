@@ -1,17 +1,19 @@
 /**
- * File: css/base.css
- * Module: Base Styles
- * Project: GatorMath
+ * Metadata:
+ *     Project: GatorMath
+ *     File Name: base.css
+ *     File Path: gatormath/web/static/css/base.css
+ *     Module: Base Styles
+ *     Created: 2025-11-02
+ *     Modified: 2025-11-02
+ *     Version: 1.0.0
+ *     Author: Dennis 'dnoice' Smaltz
+ *     AI Acknowledgement: Claude Code
  *
  * Description:
  *     Foundation styles including CSS custom properties, global resets,
  *     typography, and base animations. Defines the GatorMath color palette
  *     and establishes consistent styling primitives.
- *
- * Author: GatorMath Development Team
- * Created: 2025-11-02
- * Modified: 2025-11-02
- * Version: 1.0.0
  *
  * Contents:
  *     - CSS Custom Properties (--gator-green, --swamp-gold, etc.)
