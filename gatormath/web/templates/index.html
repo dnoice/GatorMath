@@ -44,11 +44,11 @@ Responsive: Mobile-first, scales to 4K displays
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom stylesheets -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/playground.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/playground.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
     
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -629,16 +629,16 @@ console.log('Circle area:', area.toFixed(2));</textarea>
     
     <!-- Custom Scripts -->
     <!-- Load in specific order: utilities first, then modules, then initialization -->
-    <script src="js/utils.js"></script>
-    <script src="js/three-background.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/vector-canvas.js"></script>
-    <script src="js/bezier-canvas.js"></script>
-    <script src="js/matrix-canvas.js"></script>
-    <script src="js/triangle-canvas.js"></script>
-    <script src="js/calculators.js"></script>
-    <script src="js/code-playground.js"></script>
-    <script src="js/init.js"></script>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/three-background.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vector-canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bezier-canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/matrix-canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/triangle-canvas.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/calculators.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/code-playground.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/init.js') }}"></script>
 
 </body>
 </html>
