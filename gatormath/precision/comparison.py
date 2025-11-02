@@ -1,31 +1,22 @@
 """
-Module Name: comparison
+Metadata:
+    Project: GatorMath
+    File Name: comparison.py
+    File Path: gatormath/precision/comparison.py
+    Module: Floating-Point Comparison
+    Created: 2025-11-02
+    Modified: 2025-11-02
+    Version: 0.1.0
+    Author: Dennis 'dnoice' Smaltz
+    AI Acknowledgement: Claude Code
 
 Description:
     Safe floating-point comparison functions with configurable tolerance.
     Solves classic precision issues like 0.1 + 0.2 != 0.3 by using
     epsilon-based comparisons instead of direct equality.
 
-Module Path: gatormath/precision/comparison.py
-Package: gatormath.precision
-
-Author: Dennis 'dnoice' Smaltz
-AI Acknowledgement: Claude Code
-Created: 2025-11-02
-Modified: 2025-11-02
-Version: 0.1.0
-
-Dependencies:
-    - math: Standard library math functions
-    - sys: System-specific parameters (float epsilon)
-    - typing: Type hints
-
-Exports:
-    - is_close: Check if two floats are approximately equal
-    - is_zero: Check if a float is approximately zero
-    - compare: Three-way comparison with tolerance
-
-Examples:
+Usage:
+    >>> from gatormath.precision.comparison import is_close, is_zero, compare
     >>> is_close(0.1 + 0.2, 0.3)
     True
 
@@ -35,16 +26,27 @@ Examples:
     >>> compare(5.0, 3.0)
     1
 
+Contents:
+    Functions:
+        - is_close: Check if two floats are approximately equal
+        - is_zero: Check if a float is approximately zero
+        - compare: Three-way comparison with tolerance
+
+Dependencies:
+    - math: Standard library math functions
+    - sys: System-specific parameters (float epsilon)
+    - typing: Type hints
+
 Algorithm Complexity:
     All functions: O(1) time, O(1) space
-
-Notes:
-    Default epsilon is based on sys.float_info.epsilon scaled appropriately
-    for typical use cases. Can be customized per call.
 
 References:
     [1] IEEE 754 Standard for Floating-Point Arithmetic
     [2] Python math.isclose() documentation
+
+Notes:
+    Default epsilon is based on sys.float_info.epsilon scaled appropriately
+    for typical use cases (1e-9). Can be customized per call.
 """
 
 import math

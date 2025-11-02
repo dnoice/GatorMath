@@ -268,58 +268,70 @@ def function_name(param1: Type1, param2: Type2) -> ReturnType:
 
 ```
 GatorMath/
-├── gatormath/                 # Main package
-│   ├── __init__.py            # Package initialization with metadata
-│   ├── core/                  # Core mathematical operations
-│   │   ├── __init__.py
-│   │   ├── arithmetic.py      # Basic arithmetic operations
-│   │   ├── algebra.py         # Algebraic operations
-│   │   ├── calculus.py        # Calculus operations
-│   │   └── statistics.py      # Statistical functions
-│   ├── geometry/              # Geometric operations
-│   │   ├── __init__.py
-│   │   ├── shapes2d.py        # 2D shapes
-│   │   ├── shapes3d.py        # 3D shapes
-│   │   ├── transforms.py      # Geometric transformations
-│   │   └── spatial.py         # Spatial algorithms
-│   ├── precision/             # Floating-point precision handling
-│   │   ├── __init__.py
-│   │   ├── comparison.py      # Safe comparisons
-│   │   └── rounding.py        # Robust rounding
-│   ├── cli/                   # CLI interface
-│   │   ├── __init__.py
-│   │   ├── app.py            # Main CLI application
-│   │   ├── theme.py          # Rich theme configuration
-│   │   ├── commands/         # CLI commands
-│   │   │   ├── __init__.py
-│   │   │   ├── math_cmd.py
-│   │   │   └── geometry_cmd.py
-│   │   └── interactive/      # Interactive components
-│   │       ├── __init__.py
-│   │       ├── prompts.py
-│   │       └── visualizers.py
-│   └── utils/                # Utility functions
-│       ├── __init__.py
-│       ├── validation.py
-│       └── logging.py
-├── tests/                    # Test suite
-│   ├── __init__.py
-│   ├── test_core/
-│   ├── test_geometry/
-│   └── test_precision/
-├── docs/                    # Documentation
-│   ├── STANDARDS.md         # This document
-│   ├── branding/            # Branding assets
-│   │   ├── logos/
-│   │   ├── icons/
-│   │   └── color_palette.md
-│   ├── api/                 # API documentation
-│   └── guides/              # User guides
-├── examples/                # Example scripts
-├── pyproject.toml           # Project configuration
-├── CONTRIBUTING.md          # Contribution guidelines
-├── README.md                # Project readme
-└── LICENSE                  # License file
+├── gatormath/                          # Python package (source code)
+│   ├── __init__.py                     # Package initialization
+│   ├── core/                           # Core mathematical operations
+│   │   ├── __init__.py                 # Core package init
+│   │   └── arithmetic.py               # Safe arithmetic operations
+│   ├── geometry/                       # Geometric shapes & algorithms
+│   │   ├── __init__.py                 # Geometry package init
+│   │   └── shapes2d.py                 # 2D shapes (Circle, Triangle, etc.)
+│   ├── precision/                      # Floating-point precision handling
+│   │   ├── __init__.py                 # Precision package init
+│   │   └── comparison.py               # Safe comparisons
+│   ├── cli/                            # CLI interface with Rich theming
+│   │   ├── __init__.py                 # CLI package init
+│   │   └── app.py                      # Main Typer CLI application
+│   ├── web/                            # Flask web application
+│   │   ├── __init__.py                 # Web package init
+│   │   ├── app.py                      # Flask application factory
+│   │   ├── routes/                     # API and page routes
+│   │   │   ├── __init__.py             # Routes package init
+│   │   │   ├── api.py                  # REST API endpoints
+│   │   │   └── pages.py                # Page routes
+│   │   ├── static/                     # Frontend assets
+│   │   │   ├── css/                    # Modular stylesheets
+│   │   │   │   ├── base.css            # CSS variables, resets, animations
+│   │   │   │   ├── layout.css          # Navigation, sections, grids
+│   │   │   │   ├── components.css      # Buttons, cards, calculators
+│   │   │   │   ├── playground.css      # Interactive canvas styles
+│   │   │   │   └── responsive.css      # Media queries
+│   │   │   └── js/                     # Modular JavaScript
+│   │   │       ├── utils.js            # Shared utilities
+│   │   │       ├── three-background.js # 3D background animation
+│   │   │       ├── animations.js       # GSAP scroll animations
+│   │   │       ├── vector-canvas.js    # Vector operations playground
+│   │   │       ├── bezier-canvas.js    # Bezier curve editor
+│   │   │       ├── matrix-canvas.js    # Matrix transformations
+│   │   │       ├── triangle-canvas.js  # Triangle calculator
+│   │   │       ├── calculators.js      # Live calculators
+│   │   │       ├── code-playground.js  # Interactive code editor
+│   │   │       └── init.js             # Initialization coordinator
+│   │   └── templates/                  # Jinja2 templates
+│   │       └── index.html              # Main web interface
+│   └── utils/                          # Utility functions
+│       └── __init__.py                 # Utils package init
+├── tests/                              # Test suite (coming soon)
+│   ├── __init__.py                     # Tests package init
+│   ├── test_arithmetic.py              # Core arithmetic tests
+│   ├── test_geometry.py                # Geometry tests
+│   ├── test_precision.py               # Precision tests
+│   ├── test_web.py                     # Web application tests
+│   └── test_cli.py                     # CLI tests
+├── docs/                               # Documentation
+│   ├── API_DOCS.md                     # API reference
+│   ├── CLI_DOCS.md                     # CLI documentation
+│   ├── DEVELOPMENT.md                  # Development guide
+│   ├── STANDARDS.md                    # This document
+│   ├── BRANDING.md                     # Brand guidelines
+│   ├── ASSETS.md                       # Asset documentation
+│   ├── AUTHENTICATION.md               # Auth documentation
+│   └── branches/                       # Branch-specific docs
+│       └── BRANCHES.md                 # Branch documentation
+├── pyproject.toml                      # Python project configuration
+├── README.md                           # Project overview
+├── LICENSE                             # MIT License
+└── .gitignore                          # Git ignore patterns
 ```
 
 ### Import Organization

@@ -1,47 +1,20 @@
 """
-File Name: api.py
-File Path: gatormath/web/routes/api.py
-Module Name: api
+Metadata:
+    Project: GatorMath
+    File Name: api.py
+    File Path: gatormath/web/routes/api.py
+    Module: REST API Routes
+    Created: 2025-11-02
+    Modified: 2025-11-02
+    Version: 0.1.0
+    Author: Dennis 'dnoice' Smaltz
+    AI Acknowledgement: Claude Code
 
 Description:
     REST API endpoints exposing GatorMath Python functions to the frontend.
     Provides JSON API for arithmetic, geometry, and precision operations.
 
-Module Path: gatormath/web/routes/api.py
-Package: gatormath.web.routes
-
-Author: Dennis 'dnoice' Smaltz
-AI Acknowledgement: Claude Code
-Created: 2025-11-02
-Modified: 2025-11-02
-Version: 0.1.0
-
-Dependencies:
-    - flask: Flask framework
-    - gatormath.core.arithmetic: Arithmetic operations
-    - gatormath.geometry.shapes2d: Geometric shapes
-    - gatormath.precision.comparison: Precision utilities
-
-Exports:
-    - bp: Flask Blueprint for API routes
-
-API Endpoints:
-    POST /api/arithmetic/add - Add two numbers
-    POST /api/arithmetic/multiply - Multiply two numbers
-    POST /api/arithmetic/divide - Divide two numbers
-    POST /api/arithmetic/sqrt - Square root
-    POST /api/arithmetic/factorial - Factorial
-    POST /api/geometry/circle - Circle calculations
-    POST /api/geometry/triangle - Triangle calculations
-    POST /api/precision/compare - Precision comparison
-
-Request Format:
-    JSON with operation-specific parameters
-
-Response Format:
-    JSON with result or error message
-
-Examples:
+Usage:
     POST /api/arithmetic/add
     {"a": 0.1, "b": 0.2}
     -> {"result": 0.3}
@@ -50,10 +23,34 @@ Examples:
     {"radius": 5.0}
     -> {"area": 78.54, "circumference": 31.42}
 
+Contents:
+    API Endpoints:
+        POST /api/arithmetic/add - Add two numbers
+        POST /api/arithmetic/multiply - Multiply two numbers
+        POST /api/arithmetic/divide - Divide two numbers
+        POST /api/arithmetic/sqrt - Square root
+        POST /api/arithmetic/factorial - Factorial
+        POST /api/geometry/circle - Circle calculations
+        POST /api/geometry/triangle - Triangle calculations
+        POST /api/precision/compare - Precision comparison
+
+    Exports:
+        - bp: Flask Blueprint for API routes
+
+Dependencies:
+    - flask: Flask framework
+    - gatormath.core.arithmetic: Arithmetic operations
+    - gatormath.geometry.shapes2d: Geometric shapes
+    - gatormath.precision.comparison: Precision utilities
+
+Request Format:
+    JSON with operation-specific parameters
+
+Response Format:
+    JSON with result or error message
+
 Error Handling:
     Returns JSON with error message and appropriate HTTP status code
-
-Version: 0.1.0
 """
 
 from flask import Blueprint, jsonify, request

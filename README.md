@@ -58,9 +58,10 @@ pip install -e ".[all]"
 
 **Core:**
 - Python 3.9+
-- numpy
 - rich (CLI theming)
 - typer (CLI framework)
+- flask (Web framework)
+- flask-cors (CORS support)
 
 **Development:**
 - pytest (testing)
@@ -103,20 +104,13 @@ print(is_close(0.1 + 0.2, 0.3))  # True
 # Get package info
 gatormath info
 
-# Mathematical calculations
-gatormath calculate "sqrt(144)"
-gatormath calculate "factorial(5)"
-gatormath calculate "gcd(48, 18)"
+# Display version
+gatormath version
 
-# Geometric calculations
-gatormath geometry circle --radius 10
-gatormath geometry triangle --a 3 --b 4 --c 5
-
-# Precision demonstration
-gatormath precision
-
-# Interactive demo
-gatormath demo
+# Launch Flask web server
+gatormath serve
+gatormath serve --port 8000
+gatormath serve --debug
 ```
 
 ---
@@ -127,61 +121,52 @@ gatormath demo
 
 ```
 GatorMath/
-├── gatormath/                     # Python package (backend)
-│   ├── core/                      # Mathematical operations
-│   │   ├── arithmetic.py         # Safe arithmetic operations
-│   │   ├── algebra.py            # Algebraic operations
-│   │   ├── calculus.py           # Calculus operations
-│   │   └── statistics.py         # Statistical functions
-│   ├── geometry/                  # Geometric shapes & algorithms
-│   │   ├── shapes2d.py           # 2D shapes (Circle, Triangle, etc.)
-│   │   ├── shapes3d.py           # 3D shapes (Sphere, Cube, etc.)
-│   │   ├── transforms.py         # Geometric transformations
-│   │   └── spatial.py            # Spatial algorithms
-│   ├── precision/                 # Floating-point precision
-│   │   ├── comparison.py         # Safe comparisons
-│   │   └── rounding.py           # Robust rounding
-│   ├── cli/                       # CLI interface with Rich theming
-│   │   ├── app.py                # Main Typer CLI application
-│   │   ├── theme.py              # Rich theme (GatorMath branding)
-│   │   ├── commands/             # CLI command modules
-│   │   └── interactive/          # Interactive components
-│   └── utils/                     # Utility functions
-│       ├── validation.py
-│       └── logging.py
-├── css/                           # Frontend stylesheets (modular)
-│   ├── base.css                  # CSS variables, resets, animations
-│   ├── layout.css                # Navigation, sections, grids
-│   ├── components.css            # Buttons, cards, calculators
-│   ├── playground.css            # Interactive canvas styles
-│   └── responsive.css            # Media queries
-├── js/                            # Frontend JavaScript (modular)
-│   ├── utils.js                  # Shared utilities
-│   ├── three-background.js       # 3D background animation
-│   ├── animations.js             # GSAP scroll animations
-│   ├── vector-canvas.js          # Vector operations playground
-│   ├── bezier-canvas.js          # Bezier curve editor
-│   ├── matrix-canvas.js          # Matrix transformations
-│   ├── triangle-canvas.js        # Triangle calculator
-│   ├── calculators.js            # Live calculators
-│   ├── code-playground.js        # Interactive code editor
-│   └── init.js                   # Initialization coordinator
-├── tests/                         # Comprehensive test suite
-│   ├── test_core/                # Core module tests
-│   ├── test_geometry/            # Geometry tests
-│   └── test_precision/           # Precision tests
-├── examples/                      # Usage examples
-├── docs/                          # Documentation
-│   ├── STANDARDS.md              # Project standards & guidelines
-│   ├── API_DOCS.md               # API reference
-│   ├── CLI_DOCS.md               # CLI command reference
-│   ├── DEVELOPMENT.md            # Development guide
-│   ├── BRANDING.md               # Visual identity
-│   └── branches/                 # Branch documentation
-├── index.html                     # Interactive web interface
-├── pyproject.toml                # Python project configuration
-├── README.md                     # This file
-└── LICENSE                       # MIT License
+├── gatormath/                          # Python package (backend)
+│   ├── __init__.py                     # Package initialization
+│   ├── core/                           # Mathematical operations
+│   │   ├── __init__.py                 # Core package init
+│   │   └── arithmetic.py               # Safe arithmetic operations
+│   ├── geometry/                       # Geometric shapes & algorithms
+│   │   ├── __init__.py                 # Geometry package init
+│   │   └── shapes2d.py                 # 2D shapes (Circle, Triangle, etc.)
+│   ├── precision/                      # Floating-point precision
+│   │   ├── __init__.py                 # Precision package init
+│   │   └── comparison.py               # Safe comparisons
+│   ├── cli/                            # CLI interface with Rich theming
+│   │   ├── __init__.py                 # CLI package init
+│   │   └── app.py                      # Main Typer CLI application
+│   ├── web/                            # Flask web application
+│   │   ├── __init__.py                 # Web package init
+│   │   ├── app.py                      # Flask application factory
+│   │   ├── routes/                     # API and page routes
+│   │   │   ├── __init__.py             # Routes package init
+│   │   │   ├── api.py                  # REST API endpoints
+│   │   │   └── pages.py                # Page routes
+│   │   ├── static/                     # Frontend assets
+│   │   │   ├── css/                    # Modular stylesheets
+│   │   │   │   ├── base.css            # CSS variables, resets, animations
+│   │   │   │   ├── layout.css          # Navigation, sections, grids
+│   │   │   │   ├── components.css      # Buttons, cards, calculators
+│   │   │   │   ├── playground.css      # Interactive canvas styles
+│   │   │   │   └── responsive.css      # Media queries
+│   │   │   └── js/                     # Modular JavaScript
+│   │   │       ├── utils.js            # Shared utilities
+│   │   │       ├── three-background.js # 3D background animation
+│   │   │       ├── animations.js       # GSAP scroll animations
+│   │   │       ├── vector-canvas.js    # Vector operations playground
+│   │   │       ├── bezier-canvas.js    # Bezier curve editor
+│   │   │       ├── matrix-canvas.js    # Matrix transformations
+│   │   │       ├── triangle-canvas.js  # Triangle calculator
+│   │   │       ├── calculators.js      # Live calculators
+│   │   │       ├── code-playground.js  # Interactive code editor
+│   │   │       └── init.js             # Initialization coordinator
+│   │   └── templates/                  # Jinja2 templates
+│   │       └── index.html              # Main web interface
+│   └── utils/                          # Utility functions
+│       └── __init__.py                 # Utils package init
+├── pyproject.toml                      # Python project configuration
+├── README.md                           # This file
+└── LICENSE                             # MIT License
 ```
 
 ### Core Modules
@@ -268,10 +253,15 @@ GatorMath includes a beautiful, interactive web interface showcasing mathematica
 - **Modern Stack**: Three.js for 3D graphics, GSAP for smooth animations
 - **Responsive Design**: Fully responsive from mobile to 4K displays
 
-Access the web interface by opening `index.html` in a browser or serving it with:
+Access the web interface via Flask:
 ```bash
-python -m http.server 8000
-# Navigate to http://localhost:8000
+# Using the GatorMath CLI
+gatormath serve
+
+# Or directly with Python
+python -m gatormath.web.app
+
+# Navigate to http://localhost:5000
 ```
 
 ---
@@ -308,23 +298,13 @@ Production-ready code with proper error handling, validation, and comprehensive 
 
 ## Testing
 
-Run the test suite:
+Tests coming soon! We aim for comprehensive test coverage with:
+- Unit tests for all core modules
+- Integration tests for web endpoints
+- Property-based testing with hypothesis
+- Performance benchmarks
 
-```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=gatormath --cov-report=html
-
-# Run specific test file
-pytest tests/test_core/test_arithmetic.py
-
-# Run with verbose output
-pytest -v
-```
-
-Current test coverage: **>90%**
+Target coverage: **>90%**
 
 ---
 
@@ -350,26 +330,22 @@ pytest && black --check gatormath && ruff gatormath && mypy gatormath
 
 ### Code Standards
 
-See [STANDARDS.md](docs/STANDARDS.md) for complete coding standards, including:
-- Branding and color schemes
-- Documentation templates
-- Testing requirements
-- Git workflow
-- Module structure
+All code follows these standards:
+- **Documentation**: Every file has standardized metadata docstrings
+- **Branding**: Gator Green (#00A676) and Swamp Gold (#F2C94C) color scheme
+- **Type Safety**: Full type hints throughout
+- **Testing**: Comprehensive test coverage (target >90%)
+- **Formatting**: Black for Python, consistent style for CSS/JS
 
 ---
 
 ## Examples
 
-See the [examples/](examples/) directory for comprehensive usage examples:
-
-- `basic_usage.py` - Fundamental operations and patterns
-
-Run examples:
-
-```bash
-python examples/basic_usage.py
-```
+Examples coming soon! Will include:
+- Basic arithmetic and geometry operations
+- Precision handling demonstrations
+- CLI usage patterns
+- Web API integration examples
 
 ---
 
@@ -377,11 +353,11 @@ python examples/basic_usage.py
 
 Contributions welcome! Please:
 
-1. Read [STANDARDS.md](docs/STANDARDS.md) for coding standards
+1. Follow the established coding standards and documentation format
 2. Write comprehensive tests for new features
-3. Include detailed docstrings with metadata
-4. Follow the established branding and theming
-5. Ensure all tests pass and coverage remains >90%
+3. Include detailed docstrings with standardized metadata
+4. Follow the GatorMath branding (Gator Green, Swamp Gold)
+5. Ensure code is properly formatted and type-hinted
 
 ---
 
@@ -412,10 +388,11 @@ MIT License - see [LICENSE](LICENSE) file for details.
 **GatorMath Development Team**
 
 Built with:
+- [Flask](https://flask.palletsprojects.com/) - Web framework
 - [Rich](https://github.com/Textualize/rich) - Beautiful terminal output
 - [Typer](https://github.com/tiangolo/typer) - Modern CLI framework
-- [NumPy](https://numpy.org/) - Numerical computing
-- [pytest](https://pytest.org/) - Testing framework
+- [Three.js](https://threejs.org/) - 3D graphics
+- [GSAP](https://greensock.com/gsap/) - Animation library
 
 ---
 

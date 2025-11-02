@@ -1,5 +1,14 @@
 """
-Module Name: gatormath
+Metadata:
+    Project: GatorMath
+    File Name: __init__.py
+    File Path: gatormath/__init__.py
+    Module: GatorMath Package Root
+    Created: 2025-11-02
+    Modified: 2025-11-02
+    Version: 0.1.0
+    Author: Dennis 'dnoice' Smaltz
+    AI Acknowledgement: Claude Code
 
 Description:
     GatorMath - A comprehensive math and geometry Python toolkit with bite.
@@ -9,29 +18,7 @@ Description:
     interactive Flask web application. All operations handle edge cases, check
     for overflow, and manage floating-point precision issues.
 
-Module Path: gatormath/__init__.py
-Package: gatormath
-
-Author: Dennis 'dnoice' Smaltz
-AI Acknowledgement: Claude Code
-Created: 2025-11-02
-Modified: 2025-11-02
-Version: 0.1.0
-
-Modules:
-    - core: Mathematical operations (arithmetic, algebra, calculus, statistics)
-    - geometry: Geometric shapes and algorithms (2D and 3D)
-    - precision: Floating-point precision handling
-    - cli: Command-line interface with Rich theming
-    - web: Flask web application with interactive visualizations
-    - utils: Utility functions
-
-Exports:
-    - __version__: Package version string
-    - __author__: Author information
-    - __license__: License type
-
-Examples:
+Usage:
     >>> import gatormath
     >>> print(gatormath.__version__)
     0.1.0
@@ -50,6 +37,24 @@ CLI Usage:
     $ gatormath calculate "sqrt(144)"
     $ gatormath geometry circle --radius 10
     $ gatormath serve  # Launch Flask web application
+
+Contents:
+    Modules:
+        - core: Mathematical operations (arithmetic, algebra, calculus, statistics)
+        - geometry: Geometric shapes and algorithms (2D and 3D)
+        - precision: Floating-point precision handling
+        - cli: Command-line interface with Rich theming
+        - web: Flask web application with interactive visualizations
+        - utils: Utility functions
+
+    Exports:
+        - __version__: Package version string
+        - __author__: Author information
+        - __license__: License type
+
+Dependencies:
+    - Python 3.9+ required
+    - Type hints following PEP 484
 
 Design Principles:
     1. Robustness: All code handles edge cases and floating-point issues
@@ -70,7 +75,6 @@ References:
     [2] Python Enhancement Proposals (PEP 8, PEP 257, PEP 484)
 
 Notes:
-    Requires Python 3.9+ for full functionality
     All public APIs are type-hinted and mypy-compliant
 """
 

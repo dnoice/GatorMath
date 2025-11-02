@@ -1,46 +1,48 @@
 """
-Module Name: app
+Metadata:
+    Project: GatorMath
+    File Name: app.py
+    File Path: gatormath/cli/app.py
+    Module: CLI Application
+    Created: 2025-11-02
+    Modified: 2025-11-02
+    Version: 0.1.0
+    Author: Dennis 'dnoice' Smaltz
+    AI Acknowledgement: Claude Code
 
 Description:
     Main Typer CLI application for GatorMath. Provides commands for
     mathematical calculations, geometry operations, web server management,
     and interactive demos.
 
-Module Path: gatormath/cli/app.py
-Package: gatormath.cli
+Usage:
+    $ gatormath serve
+    $ gatormath serve --port 8000
+    $ gatormath info
+    $ gatormath version
 
-Author: Dennis 'dnoice' Smaltz
-AI Acknowledgement: Claude Code
-Created: 2025-11-02
-Modified: 2025-11-02
-Version: 0.1.0
+Contents:
+    Commands:
+        - serve: Launch Flask web application
+        - info: Display package information
+        - version: Display version
+
+    Exports:
+        - app: Typer application instance
+        - main: Main entry point
 
 Dependencies:
     - typer: CLI framework
     - rich: Beautiful terminal output
     - gatormath: Core functionality
 
-Exports:
-    - app: Typer application instance
-    - main: Main entry point
-
-Commands:
-    - serve: Launch Flask web application
-    - info: Display package information
-    - version: Display version
-
-Examples:
-    $ gatormath serve
-    $ gatormath serve --port 8000
-    $ gatormath info
-    $ gatormath version
-
-Notes:
-    Entry point defined in pyproject.toml:
+Entry Point:
+    Defined in pyproject.toml:
     [project.scripts]
     gatormath = "gatormath.cli.app:main"
 
-Version: 0.1.0
+Notes:
+    All commands use Rich for beautiful terminal output
 """
 
 import sys

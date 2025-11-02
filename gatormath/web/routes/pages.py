@@ -1,41 +1,41 @@
 """
-File Name: pages.py
-File Path: gatormath/web/routes/pages.py
-Module Name: pages
+Metadata:
+    Project: GatorMath
+    File Name: pages.py
+    File Path: gatormath/web/routes/pages.py
+    Module: Page Routes
+    Created: 2025-11-02
+    Modified: 2025-11-02
+    Version: 0.1.0
+    Author: Dennis 'dnoice' Smaltz
+    AI Acknowledgement: Claude Code
 
 Description:
     Flask blueprint for serving web pages and templates.
     Handles main application routes for the interactive frontend.
 
-Module Path: gatormath/web/routes/pages.py
-Package: gatormath.web.routes
+Usage:
+    Routes are registered in app.py via:
+    >>> app.register_blueprint(pages.bp)
 
-Author: Dennis 'dnoice' Smaltz
-AI Acknowledgement: Claude Code
-Created: 2025-11-02
-Modified: 2025-11-02
-Version: 0.1.0
+    GET / -> renders index.html
+    GET /health -> {"status": "healthy", "version": "0.1.0"}
+
+Contents:
+    Routes:
+        - GET /: Main application page
+        - GET /health: Health check endpoint
+
+    Exports:
+        - bp: Flask Blueprint for page routes
 
 Dependencies:
     - flask: Flask framework
     - gatormath: Version info
 
-Exports:
-    - bp: Flask Blueprint for page routes
-
-Routes:
-    - GET /: Main application page
-    - GET /health: Health check endpoint
-
-Examples:
-    Routes are registered in app.py via:
-    >>> app.register_blueprint(pages.bp)
-
 Notes:
     Templates served from gatormath/web/templates/
     Static assets served from gatormath/web/static/
-
-Version: 0.1.0
 """
 
 from flask import Blueprint, render_template

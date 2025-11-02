@@ -1,42 +1,49 @@
 """
-Module Name: app
+Metadata:
+    Project: GatorMath
+    File Name: app.py
+    File Path: gatormath/web/app.py
+    Module: Flask Application Factory
+    Created: 2025-11-02
+    Modified: 2025-11-02
+    Version: 0.1.0
+    Author: Dennis 'dnoice' Smaltz
+    AI Acknowledgement: Claude Code
 
 Description:
     Flask application factory and configuration. Creates and configures
     the Flask application instance with routes, CORS, and error handlers.
 
-Module Path: gatormath/web/app.py
-Package: gatormath.web
+Usage:
+    >>> from gatormath.web.app import create_app
+    >>> app = create_app()
+    >>> app.run(host='0.0.0.0', port=5000, debug=True)
 
-Author: Dennis 'dnoice' Smaltz
-AI Acknowledgement: Claude Code
-Created: 2025-11-02
-Modified: 2025-11-02
-Version: 0.1.0
+    Or via CLI:
+    $ gatormath serve
+    $ python -m gatormath.web.app
+
+Contents:
+    Functions:
+        - create_app: Flask application factory function
+        - main: Main entry point for running Flask directly
 
 Dependencies:
     - flask: Flask web framework
     - flask_cors: CORS support for API endpoints
     - os: Path operations
-
-Exports:
-    - create_app: Flask application factory function
-
-Examples:
-    >>> from gatormath.web.app import create_app
-    >>> app = create_app()
-    >>> app.run(host='0.0.0.0', port=5000, debug=True)
-
-Notes:
-    Uses application factory pattern for flexibility
-    CORS enabled for API routes to support external clients
-    Static files served from gatormath/web/static/
-    Templates loaded from gatormath/web/templates/
+    - gatormath.web.routes: API and page route blueprints
 
 Configuration:
     - DEBUG: Set via environment or parameter
     - SECRET_KEY: Generated or provided
     - CORS: Enabled for /api/* routes
+    - Static folder: gatormath/web/static/
+    - Template folder: gatormath/web/templates/
+
+Notes:
+    Uses application factory pattern for flexibility
+    CORS enabled for API routes to support external clients
 """
 
 import os
