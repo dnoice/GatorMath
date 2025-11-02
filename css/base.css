@@ -1,3 +1,37 @@
+/**
+ * File: css/base.css
+ * Module: Base Styles
+ * Project: GatorMath
+ *
+ * Description:
+ *     Foundation styles including CSS custom properties, global resets,
+ *     typography, and base animations. Defines the GatorMath color palette
+ *     and establishes consistent styling primitives.
+ *
+ * Author: GatorMath Development Team
+ * Created: 2025-11-02
+ * Modified: 2025-11-02
+ * Version: 1.0.0
+ *
+ * Contents:
+ *     - CSS Custom Properties (--gator-green, --swamp-gold, etc.)
+ *     - Global resets (box-sizing, margin, padding)
+ *     - Typography (font families, monospace code)
+ *     - Syntax highlighting colors for code blocks
+ *     - Base animations (fade-in, glow-pulse, slideIn)
+ *
+ * Dependencies:
+ *     - Google Fonts: Inter, Fira Code
+ *
+ * Color Palette:
+ *     --gator-green: #00A676 (brand primary)
+ *     --swamp-gold: #F2C94C (accents, highlights)
+ *     --graphite: #2E2E2E (backgrounds)
+ *     --mist-white: #F9FAF8 (text)
+ *     --glow-green: rgba(0, 166, 118, 0.5) (glows, shadows)
+ *     --glow-gold: rgba(242, 201, 76, 0.5) (glows, shadows)
+ */
+
 /* ===== BASE STYLES ===== */
 /* CSS Variables, Resets, Typography */
 

@@ -127,23 +127,61 @@ gatormath demo
 
 ```
 GatorMath/
-├── gatormath/              # Main package
-│   ├── core/              # Mathematical operations
-│   │   └── arithmetic.py  # Safe arithmetic
-│   ├── geometry/          # Geometric shapes
-│   │   └── shapes2d.py    # 2D shapes
-│   ├── precision/         # Precision handling
-│   │   └── comparison.py  # Safe comparisons
-│   ├── cli/               # CLI interface
-│   │   ├── app.py        # Main CLI app
-│   │   └── theme.py      # Rich theming
-│   └── utils/            # Utilities
-├── tests/                # Test suite
-├── examples/             # Usage examples
-├── docs/                 # Documentation
-│   ├── STANDARDS.md     # Project standards
-│   └── branding/        # Brand assets
-└── pyproject.toml       # Project configuration
+├── gatormath/                     # Python package (backend)
+│   ├── core/                      # Mathematical operations
+│   │   ├── arithmetic.py         # Safe arithmetic operations
+│   │   ├── algebra.py            # Algebraic operations
+│   │   ├── calculus.py           # Calculus operations
+│   │   └── statistics.py         # Statistical functions
+│   ├── geometry/                  # Geometric shapes & algorithms
+│   │   ├── shapes2d.py           # 2D shapes (Circle, Triangle, etc.)
+│   │   ├── shapes3d.py           # 3D shapes (Sphere, Cube, etc.)
+│   │   ├── transforms.py         # Geometric transformations
+│   │   └── spatial.py            # Spatial algorithms
+│   ├── precision/                 # Floating-point precision
+│   │   ├── comparison.py         # Safe comparisons
+│   │   └── rounding.py           # Robust rounding
+│   ├── cli/                       # CLI interface with Rich theming
+│   │   ├── app.py                # Main Typer CLI application
+│   │   ├── theme.py              # Rich theme (GatorMath branding)
+│   │   ├── commands/             # CLI command modules
+│   │   └── interactive/          # Interactive components
+│   └── utils/                     # Utility functions
+│       ├── validation.py
+│       └── logging.py
+├── css/                           # Frontend stylesheets (modular)
+│   ├── base.css                  # CSS variables, resets, animations
+│   ├── layout.css                # Navigation, sections, grids
+│   ├── components.css            # Buttons, cards, calculators
+│   ├── playground.css            # Interactive canvas styles
+│   └── responsive.css            # Media queries
+├── js/                            # Frontend JavaScript (modular)
+│   ├── utils.js                  # Shared utilities
+│   ├── three-background.js       # 3D background animation
+│   ├── animations.js             # GSAP scroll animations
+│   ├── vector-canvas.js          # Vector operations playground
+│   ├── bezier-canvas.js          # Bezier curve editor
+│   ├── matrix-canvas.js          # Matrix transformations
+│   ├── triangle-canvas.js        # Triangle calculator
+│   ├── calculators.js            # Live calculators
+│   ├── code-playground.js        # Interactive code editor
+│   └── init.js                   # Initialization coordinator
+├── tests/                         # Comprehensive test suite
+│   ├── test_core/                # Core module tests
+│   ├── test_geometry/            # Geometry tests
+│   └── test_precision/           # Precision tests
+├── examples/                      # Usage examples
+├── docs/                          # Documentation
+│   ├── STANDARDS.md              # Project standards & guidelines
+│   ├── API_DOCS.md               # API reference
+│   ├── CLI_DOCS.md               # CLI command reference
+│   ├── DEVELOPMENT.md            # Development guide
+│   ├── BRANDING.md               # Visual identity
+│   └── branches/                 # Branch documentation
+├── index.html                     # Interactive web interface
+├── pyproject.toml                # Python project configuration
+├── README.md                     # This file
+└── LICENSE                       # MIT License
 ```
 
 ### Core Modules
@@ -209,6 +247,31 @@ is_zero(1e-15)  # True
 compare(5.0, 3.0)  # Returns 1 (greater)
 compare(3.0, 5.0)  # Returns -1 (less)
 compare(3.0, 3.0000001)  # Returns 0 (equal within tolerance)
+```
+
+### Interactive Frontend
+
+GatorMath includes a beautiful, interactive web interface showcasing mathematical concepts:
+
+#### Features
+- **Vector Operations Playground**: Drag vectors to see dot products, cross products, and transformations in real-time
+- **Bezier Curve Editor**: Interactive control points with animated point traversal
+- **Matrix Transformations**: Live visualization of rotation and scaling operations
+- **Triangle Calculator**: Drag vertices to calculate area, perimeter, and angles dynamically
+- **Live Calculators**: Distance, circle properties, angle conversion, vector projection, matrix determinants, quadratic roots
+- **Code Playground**: Interactive JavaScript console for experimenting with math operations
+- **3D Background**: Animated Three.js particle grid that responds to mouse movement
+
+#### Frontend Architecture
+- **Modular CSS**: Separation of concerns (base, layout, components, playground, responsive)
+- **Modular JavaScript**: Each feature in its own file with clear dependencies
+- **Modern Stack**: Three.js for 3D graphics, GSAP for smooth animations
+- **Responsive Design**: Fully responsive from mobile to 4K displays
+
+Access the web interface by opening `index.html` in a browser or serving it with:
+```bash
+python -m http.server 8000
+# Navigate to http://localhost:8000
 ```
 
 ---

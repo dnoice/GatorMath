@@ -1,3 +1,32 @@
+/**
+ * File: css/layout.css
+ * Module: Layout Styles
+ * Project: GatorMath
+ *
+ * Description:
+ *     Structural layout styles including navigation bar, sections, containers,
+ *     and grid systems. Handles page structure, positioning, and content flow.
+ *
+ * Author: GatorMath Development Team
+ * Created: 2025-11-02
+ * Modified: 2025-11-02
+ * Version: 1.0.0
+ *
+ * Contents:
+ *     - Canvas background (Three.js container)
+ *     - Navigation bar (fixed header with hamburger menu)
+ *     - Sections (hero, features, examples, playground, etc.)
+ *     - Container (max-width content wrapper)
+ *     - Grid layouts (features-grid, calculator-grid, playground-container)
+ *     - Footer
+ *
+ * Layout Strategy:
+ *     - Mobile-first responsive design
+ *     - Flexbox for navigation and buttons
+ *     - CSS Grid for card layouts
+ *     - Fixed navigation with backdrop blur
+ */
+
 /* ===== LAYOUT STYLES ===== */
 /* Navigation, Sections, Container, Grid Layouts */
 
